@@ -6,10 +6,11 @@
   :root {
     /* background colors */
     --background: 0 0% 100%;
+    --accent: 225.25 71.31% 49.22%;
     --secondary: 0 0% 100%;
     --popover: 0 0% 100%;
-    --success: 142 72% 29%;
-    --destructive: 0 72% 51%;
+    --success: 165.39 100% 22.55%;
+    --destructive: 338.78 100% 35.49%;
     --warning: 41 96% 40%;
     --hover: 60 4.8% 95.9%;
 
