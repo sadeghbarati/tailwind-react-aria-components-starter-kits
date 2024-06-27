@@ -374,7 +374,7 @@ export const WithCustomTrigger = () => {
           className="size-10"
           src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
         ></Avatar>
-        <div className="mr-16 flex w-16 flex-col justify-center">
+        <div className="me-16 flex w-16 flex-col justify-center">
           <span className="text-sm/5 font-medium">Taylor</span>
           <span className="text-xs/5 text-muted">Manager</span>
         </div>
@@ -430,7 +430,7 @@ export const WithLink = () => {
           <MenuItem>
             Workflow Analytics
             <Icon>
-              <ExternalLink className="ml-auto h-4" />
+              <ExternalLink className="ms-auto h-4" />
             </Icon>
           </MenuItem>
         </Menu>

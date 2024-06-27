@@ -98,7 +98,7 @@ export function DropdownItem({
           return twMerge([
             'group flex cursor-default select-none items-center gap-1 outline-none outline-0',
             'text-base/6 sm:text-sm/6 rounded-md',
-            'p-1.5 has-submenu:pr-0',
+            'p-1.5 has-submenu:pe-0',
             isDisabled && 'opacity-50',
             isFocused && 'bg-accent/85 text-white',
             destructive && 'text-destructive ',
@@ -135,8 +135,8 @@ export function DropdownSection<T extends object>(
         '[&:first-child]:-mt-[1px]',
         '[&:not(:first-child)]:mt-0.5',
         '[&:not(:first-child)]:border-t [&:not(:first-child)]:border-t-border/75 dark:[&:not(:first-child)]:border-t-border',
-        '[&_header]:has-[[role=option]]:pl-6',
-        '[&_header]:has-[[role=menuitem]]:pl-3',
+        '[&_header]:has-[[role=option]]:ps-6',
+        '[&_header]:has-[[role=menuitem]]:ps-3',
       )}
     >
       <Header

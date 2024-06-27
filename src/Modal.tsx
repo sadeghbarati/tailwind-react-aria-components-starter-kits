@@ -55,7 +55,7 @@ export function Modal({
         classNames?.modalOverlay,
         (className, renderProps) => {
           return twMerge(
-            'fixed left-0 top-0 isolate z-20',
+            'fixed start-0 top-0 isolate z-20',
             'h-[--visual-viewport-height] w-full',
             'bg-zinc-950/15 dark:bg-zinc-950/50',
             'flex items-end text-center sm:items-center',
@@ -92,7 +92,7 @@ export function Modal({
           classNames?.modal,
           (className, renderProps) => {
             return twMerge(
-              'max-h-full w-full overflow-hidden text-left align-middle shadow-lg',
+              'max-h-full w-full overflow-hidden text-start align-middle shadow-lg',
               'bg-background dark:bg-secondary',
               'ring-1 ring-zinc-950/5  dark:ring-white/10',
               sizes[props.size ?? 'lg'],

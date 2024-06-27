@@ -40,7 +40,7 @@ export function DateRangePickerInput() {
         <DateInput slot="start" className="min-w-fit" />
         <span
           aria-hidden="true"
-          className="ml-2 text-gray-800 group-disabled:text-gray-200 dark:text-zinc-200 group-disabled:dark:text-zinc-600"
+          className="ms-2 text-gray-800 group-disabled:text-gray-200 dark:text-zinc-200 group-disabled:dark:text-zinc-600"
         >
           –
         </span>
@@ -86,7 +86,7 @@ export function DateRangePickerButton() {
               <span className="min-w-fit text-sm">{formattedValue.start}</span>
               <span
                 aria-hidden="true"
-                className="ml-2 text-gray-800 group-disabled:text-gray-200 dark:text-zinc-200 group-disabled:dark:text-zinc-600"
+                className="ms-2 text-gray-800 group-disabled:text-gray-200 dark:text-zinc-200 group-disabled:dark:text-zinc-600"
               >
                 –
               </span>

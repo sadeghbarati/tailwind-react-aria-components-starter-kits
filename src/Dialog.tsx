@@ -123,7 +123,7 @@ export function DialogCloseButton() {
   return (
     <CloseButton
       plain
-      className="absolute right-4 top-4 p-1.5 text-muted"
+      className="absolute end-4 top-4 p-1.5 text-muted"
       onPress={() => state.close()}
     />
   );
@@ -143,7 +143,7 @@ export function DialogTitle({
       level={level}
       className={twMerge(
         'flex flex-1 items-center',
-        !noCloseButton && 'pr-14',
+        !noCloseButton && 'pe-14',
         className,
       )}
     >

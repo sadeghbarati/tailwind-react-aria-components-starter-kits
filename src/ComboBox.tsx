@@ -61,7 +61,7 @@ export function ComboBoxListBox<T extends object>({
 export function TriggerButton() {
   return (
     <Button
-      className="absolute right-1 top-1/2 size-7 -translate-y-1/2 p-0.5 rounded-md"
+      className="absolute end-1.5 top-1/2 size-7 -translate-y-1/2 p-0.5 rounded-md"
       plain
     >
       <Icon>
@@ -85,7 +85,7 @@ export function ClearButton({
   return (
     <CloseButton
       slot={null}
-      className="absolute right-1 top-1/2 -translate-y-1/2"
+      className="absolute end-1.5 top-1/2 -translate-y-1/2"
       size="sm"
       plain
       onPress={(e) => {

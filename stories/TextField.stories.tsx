@@ -67,7 +67,7 @@ export const WithIcon = () => {
 
       <InputFieldGroup role="presentation">
         <Icon>
-          <Mail className="ml-2 size-4" strokeWidth={1.5} />
+          <Mail className="ms-2 size-4" strokeWidth={1.5} />
         </Icon>
         <Input />
       </InputFieldGroup>
@@ -95,7 +95,7 @@ export const WithValidation = () => {
 
         <InputFieldGroup role="presentation">
           <Icon>
-            <Mail className="ml-2 size-4" strokeWidth={1.5} />
+            <Mail className="ms-2 size-4" strokeWidth={1.5} />
           </Icon>
           <Input />
         </InputFieldGroup>

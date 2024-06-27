@@ -24,11 +24,11 @@ export function Separator({
             ? [
                 'flex flex-col items-center mx-2',
                 "before:content-['']",
-                'before:border-l',
+                'before:border-s',
                 'before:flex-1',
                 'before:mb-2',
                 "after:content-['']",
-                'after:border-r',
+                'after:border-e',
                 'after:flex-1',
                 'after:mt-2',
               ]
@@ -38,14 +38,14 @@ export function Separator({
                 "before:content-['']",
                 'before:border-t',
                 'before:flex-1',
-                'before:mr-2',
+                'before:me-2',
                 "after:content-['']",
                 'after:border-t',
                 'after:flex-1',
-                'after:ml-2',
+                'after:ms-2',
               ]
           : orientation === 'vertical'
-            ? 'mx-1 h-auto self-stretch border-l'
+            ? 'mx-1 h-auto self-stretch border-s'
             : 'my-0.5 h-px w-full self-stretch border-b',
         className,
       )}

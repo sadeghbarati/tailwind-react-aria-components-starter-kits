@@ -38,9 +38,9 @@ export function Popover({
         return twMerge(
           'max-w-[250px] rounded-lg bg-background bg-popover shadow-lg ring-1 ring-border/75 dark:ring-border',
           renderProps.isEntering &&
-            'duration-50 ease-out animate-in fade-in placement-left:slide-in-from-right-1 placement-right:slide-in-from-left-1 placement-top:slide-in-from-bottom-1 placement-bottom:slide-in-from-top-1',
+            'duration-50 ease-out animate-in fade-in placement-left:slide-in-from-end-1.5 placement-right:slide-in-from-start-1 placement-top:slide-in-from-bottom-1 placement-bottom:slide-in-from-top-1',
           renderProps.isExiting &&
-            'duration-50 ease-in animate-out fade-out placement-left:slide-out-to-right-1 placement-right:slide-out-to-left-1 placement-top:slide-out-to-bottom-1 placement-bottom:slide-out-to-top-1',
+            'duration-50 ease-in animate-out fade-out placement-left:slide-out-to-end-1.5 placement-right:slide-out-to-start-1 placement-top:slide-out-to-bottom-1 placement-bottom:slide-out-to-top-1',
 
           className,
         );

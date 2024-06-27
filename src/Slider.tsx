@@ -36,7 +36,7 @@ export function SliderTack({ thumbLabels }: { thumbLabels?: string[] }) {
           'absolute top-[50%] translate-y-[-50%] rounded-full',
           orientation === 'horizontal' && 'h-1 w-full',
           orientation === 'vertical' &&
-            'left-[50%] h-full w-[6px] translate-x-[-50%] translate-y-[-50%]',
+            'start-[50%] h-full w-[6px] translate-x-[-50%] translate-y-[-50%]',
           isDisabled && 'opacity-50',
         ];
 
@@ -57,7 +57,7 @@ export function SliderTack({ thumbLabels }: { thumbLabels?: string[] }) {
                 className={composeRenderProps('', (className, renderProps) => {
                   return twMerge(
                     'h-5 w-5 rounded-full border bg-white shadow-xl dark:border-0',
-                    'group-orientation-horizontal:top-[50%] group-orientation-vertical:left-[50%]',
+                    'group-orientation-horizontal:top-[50%] group-orientation-vertical:start-[50%]',
                     className,
                     renderProps.isDragging && 'border-8 border-accent',
                     renderProps.isDisabled && 'cursor-not-allowed',

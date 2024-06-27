@@ -55,11 +55,11 @@ export function Slack() {
   return (
     <div className="flex min-h-screen flex-col bg-gradient-to-r from-fuchsia-950 via-fuchsia-900 to-fuchsia-950">
       <div className="flex h-10 items-center px-4">
-        <div className="ml-auto w-2/5">
+        <div className="ms-auto w-2/5">
           <SearchBox />
         </div>
         <TooltipTrigger>
-          <Button unstyle className="ml-auto p-2 text-white" aria-label="help">
+          <Button unstyle className="ms-auto p-2 text-white" aria-label="help">
             <Icon>
               <HelpCircle className="size-5" />
             </Icon>
@@ -78,7 +78,7 @@ export function Slack() {
             <ProfileMenu />
           </div>
         </div>
-        <div className="mb-1 mr-1 flex flex-1 rounded-md border border-fuchsia-900 bg-background">
+        <div className="mb-1 me-1 flex flex-1 rounded-md border border-fuchsia-900 bg-background">
           <Sidebar />
         </div>
       </div>
@@ -107,19 +107,19 @@ function SearchBox() {
     <ComboBox allowsCustomValue menuTrigger="focus" aria-label="Search">
       <div className="relative">
         <Icon>
-          <Search className="absolute left-2 top-1/2 w-4 -translate-y-1/2 text-muted" />
+          <Search className="absolute start-2 top-1/2 w-4 -translate-y-1/2 text-muted" />
         </Icon>
 
         <Input
           ref={ref}
           placeholder="Search"
-          className="peer h-8 bg-background pl-7 focus:border-border focus:ring-0"
+          className="peer h-8 bg-background ps-7 focus:border-border focus:ring-0"
         />
 
-        <Keyboard className="absolute right-2 top-1/2 hidden -translate-y-1/2 px-2 font-sans text-sm/6 text-muted sm:flex sm:peer-data-[focused=true]:hidden">
+        <Keyboard className="absolute end-2 top-1/2 hidden -translate-y-1/2 px-2 font-sans text-sm/6 text-muted sm:flex sm:peer-data-[focused=true]:hidden">
           ⌘K
         </Keyboard>
-        <Keyboard className="absolute right-2 top-1/2 hidden -translate-y-1/2 rounded-md border px-2 py-0.5 text-[0.6rem] text-muted sm:peer-data-[focused=true]:flex">
+        <Keyboard className="absolute end-2 top-1/2 hidden -translate-y-1/2 rounded-md border px-2 py-0.5 text-[0.6rem] text-muted sm:peer-data-[focused=true]:flex">
           ESC
         </Keyboard>
       </div>
@@ -148,7 +148,7 @@ function SearchBox() {
 
 function Sidebar() {
   return (
-    <div className="w-80 border-r bg-fuchsia-900/95 p-2">
+    <div className="w-80 border-e bg-fuchsia-900/95 p-2">
       <div className="flex">
         <CompanyMenu />
         <FilterMessagesMenu />
@@ -276,13 +276,13 @@ function CompanyMenu() {
                   <MenuItem textValue="workflow builder">
                     <span>Workflow Builder</span>
                     <Icon>
-                      <ExternalLink className="ml-auto h-4" />
+                      <ExternalLink className="ms-auto h-4" />
                     </Icon>
                   </MenuItem>
                   <MenuItem textValue="Workflow analytics">
                     <span>Workflow Analytics</span>
                     <Icon>
-                      <ExternalLink className="ml-auto h-4" />
+                      <ExternalLink className="ms-auto h-4" />
                     </Icon>
                   </MenuItem>
                 </MenuSection>
@@ -306,7 +306,7 @@ function FilterMessagesMenu() {
     <MenuTrigger>
       <MenuButton
         plain
-        className="ml-auto text-white hover:bg-fuchsia-900"
+        className="ms-auto text-white hover:bg-fuchsia-900"
         noArrow
       >
         <Icon aria-label="Filter Conversation">

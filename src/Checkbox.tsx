@@ -59,8 +59,8 @@ export function CheckboxField({
         {...props}
         className={twMerge(
           'group flex flex-col gap-y-1',
-          'sm:[&_[slot=description]]:has-[label[data-label-position=left]]:pr-7',
-          'sm:[&_[slot=description]]:has-[label[data-label-position=right]]:pl-7',
+          'sm:[&_[slot=description]]:has-[label[data-label-position=left]]:pe-7',
+          'sm:[&_[slot=description]]:has-[label[data-label-position=right]]:ps-7',
           '[&_label]:has-[[data-label-position=left]]:justify-between',
           // When a checkbox has description, make the label font-medium
           '[&_label]:has-[[slot=description]]:font-medium',

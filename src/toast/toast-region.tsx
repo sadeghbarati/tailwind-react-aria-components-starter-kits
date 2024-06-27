@@ -27,22 +27,22 @@ function ToastRegion({ state, ...props }: ToastRegionProps) {
     state.visibleToasts[state.visibleToasts.length - 1].content.position ??
     'bottom-right';
 
-  let className = 'bottom-6 right-6 anim ';
+  let className = 'bottom-6 end-6 anim ';
   switch (position) {
     case 'bottom-left':
-      className = 'bottom-6 left-6';
+      className = 'bottom-6 start-6';
       break;
     case 'bottom-center':
-      className = 'bottom-6 left-1/2 -translate-x-1/2';
+      className = 'bottom-6 start-1/2 -translate-x-1/2';
       break;
     case 'top-left':
-      className = 'top-6 left-6 ';
+      className = 'top-6 start-6 ';
       break;
     case 'top-center':
-      className = 'top-6 left-1/2 -translate-x-1/2';
+      className = 'top-6 start-1/2 -translate-x-1/2';
       break;
     case 'top-right':
-      className = 'top-6 right-6';
+      className = 'top-6 end-6';
       break;
 
     default:

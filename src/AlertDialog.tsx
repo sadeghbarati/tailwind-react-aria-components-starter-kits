@@ -53,7 +53,7 @@ export function AlertDialog({
             {secondaryActionLabel ? (
               <Button
                 outline
-                className="sm:ml-auto"
+                className="sm:ms-auto"
                 onPress={chain(onSecondaryAction, close)}
               >
                 {secondaryActionLabel}

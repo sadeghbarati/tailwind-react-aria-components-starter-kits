@@ -260,10 +260,10 @@ export function SearchInput({
       )}
     >
       <Icon>
-        <Search className="ml-2 size-5" strokeWidth={1.5} />
+        <Search className="ms-2 size-5" strokeWidth={1.5} />
       </Icon>
       <Input {...props} />
-      <CloseButton plain size="sm" className="mr-1 group-empty:invisible" />
+      <CloseButton plain size="sm" className="me-1 group-empty:invisible" />
     </InputFieldGroup>
   );
 }

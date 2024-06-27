@@ -3,6 +3,7 @@ import '../src/themes/themes.css';
 import '../src/themes/avatarColorPalette.css';
 import type { Preview } from '@storybook/react';
 import React from 'react';
+import { I18nProvider } from 'react-aria'
 
 const preview: Preview = {
   globalTypes: {
@@ -86,10 +87,15 @@ const preview: Preview = {
         }
       }
 
-      return <Story />;
+      return (
+        <I18nProvider locale='fa-IR'>
+          <Story />
+        </I18nProvider>
+      );
     },
   ],
   parameters: {
+    direction: 'rtl',
     backgrounds: { disable: true },
     grids: {disabled: true},
     layout: 'fullscreen',

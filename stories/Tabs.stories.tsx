@@ -177,7 +177,7 @@ export const VerticalPillsTab = () => {
         orientation="vertical"
       >
         <TabList
-          className="mr-2 gap-3"
+          className="me-2 gap-3"
           aria-label="History of Ancient Rome"
           items={tabs}
         >

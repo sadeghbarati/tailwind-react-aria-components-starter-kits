@@ -271,7 +271,7 @@ export function SearchBox() {
       <Description>Open the combobox using ⌘K</Description>
       <div className="relative">
         <Icon>
-          <Search className="absolute left-2 top-1/2 w-4 -translate-y-1/2 text-muted" />
+          <Search className="absolute start-2 top-1/2 w-4 -translate-y-1/2 text-muted" />
         </Icon>
 
         <Input placeholder="Search&hellip;" ref={ref} className="px-7" />

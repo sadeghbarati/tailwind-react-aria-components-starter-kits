@@ -16,8 +16,8 @@ export function SwitchField({
         {...props}
         className={twMerge(
           'group flex flex-col gap-y-1',
-          'sm:[&_[slot=description]]:has-[label[data-label-position=left]]:pr-[4rem]',
-          'sm:[&_[slot=description]]:has-[label[data-label-position=right]]:pl-[3rem]',
+          'sm:[&_[slot=description]]:has-[label[data-label-position=left]]:pe-[4rem]',
+          'sm:[&_[slot=description]]:has-[label[data-label-position=right]]:ps-[3rem]',
           '[&_label]:has-[[data-label-position=left]]:justify-between',
           '[&_label]:has-[[slot=description]]:font-medium',
           className,
@@ -67,6 +67,7 @@ export function Switch({
                     'group:disabled:bg-gray-200 group:disabled:dark:bg-zinc-700',
                     renderProps.isFocusVisible && focusOutlineStyle,
                   )}
+                  dir="ltr"
                 >
                   <span className="h-[0.85rem] w-[0.85rem] translate-x-0 transform rounded-full bg-white shadow-sm transition duration-200 ease-in-out group-selected:translate-x-[90%]" />
                 </div>

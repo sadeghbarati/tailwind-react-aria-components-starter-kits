@@ -80,7 +80,7 @@ export function DatePickerButton(props: GroupProps) {
             <span className="text-sm">{formattedDate}</span>
           )}
           <Icon>
-            <CalendarDays className="ml-auto size-4 opacity-75" />
+            <CalendarDays className="ms-auto size-4 opacity-75" />
           </Icon>
         </Button>
 

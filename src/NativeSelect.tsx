@@ -49,8 +49,8 @@ export function NativeSelect({
                     'relative flex',
                     'transition',
                     'w-full min-w-[150px]',
-                    "before:pointer-events-none before:absolute before:right-2 before:top-[45%] before:size-[5px] before:-translate-x-1/2 before:-translate-y-1/2 before:rotate-45 before:border-l before:border-t before:border-muted before:content-['']",
-                    "after:pointer-events-none after:absolute after:bottom-[45%] after:right-2 after:size-[5px] after:-translate-x-1/2 after:translate-y-1/2 after:rotate-45  after:border-b after:border-r after:border-muted after:content-['']",
+                    "before:pointer-events-none before:absolute before:end-2 before:top-[45%] before:size-[5px] before:-translate-x-1/2 before:-translate-y-1/2 before:rotate-45 before:border-s before:border-t before:border-muted before:content-['']",
+                    "after:pointer-events-none after:absolute after:bottom-[45%] after:end-2 after:size-[5px] after:-translate-x-1/2 after:translate-y-1/2 after:rotate-45  after:border-b after:border-e after:border-muted after:content-['']",
                     className,
                   )}
                 >
@@ -59,7 +59,7 @@ export function NativeSelect({
                     aria-labelledby={labelContext?.['aria-labelledBy']}
                     aria-describedby={descriptionContext?.['aria-describedby']}
                     className={twMerge(
-                      'appearance-none bg-transparent py-1.5 pl-3 pr-8 text-base/6 outline-none sm:text-sm/6',
+                      'appearance-none bg-transparent py-1.5 ps-3 pe-8 text-base/6 outline-none sm:text-sm/6',
                       'w-full cursor-default items-center rounded-md border shadow-sm outline-none',
                       isFocusVisible && inputRingStyle,
                     )}

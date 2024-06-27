@@ -68,7 +68,7 @@ export const Example = () => {
 
               <MenuTrigger>
                 <MenuButton plain>
-                  Language <span className="ml-auto">English (US)</span>
+                  Language <span className="ms-auto">English (US)</span>
                 </MenuButton>
                 <MenuPopover placement="end top">
                   <Menu>
@@ -132,7 +132,7 @@ export const ControlledOpen = () => {
 
             <MenuTrigger>
               <MenuButton plain>
-                Language <span className="ml-auto">English (US)</span>
+                Language <span className="ms-auto">English (US)</span>
               </MenuButton>
               <MenuPopover placement="end top">
                 <Menu>

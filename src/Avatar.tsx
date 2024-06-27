@@ -125,7 +125,7 @@ export const AvatarBadge = ({
       id={context.badgeId}
       className={twMerge([
         '@[32px]:w-2/5 @[40px]:w-1/3 @[80px]:w-1/4 @[96px]:w-1/4',
-        'z-1 absolute bottom-0 right-0 z-10 rounded-full border-2 border-background bg-background',
+        'z-1 absolute bottom-0 end-0 z-10 rounded-full border-2 border-background bg-background',
         'translate-x-[15%] translate-y-[20%]',
         '[.rounded-full_&]:translate-x-[35%] [.rounded-full_&]:translate-y-[5%]',
         '@[40px]:[.rounded-full_&]:translate-x-[15%]',

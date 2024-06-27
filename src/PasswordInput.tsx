@@ -11,7 +11,7 @@ export function PasswordInput(props: InputProps) {
     <div className="relative">
       <Input
         type={isPasswordVisible ? 'text' : 'password'}
-        className="peer pr-8"
+        className="peer pe-8"
         {...props}
       />
       <ToggleButton
@@ -19,7 +19,7 @@ export function PasswordInput(props: InputProps) {
         onChange={setIsPasswordVisible}
         aria-controls="Toggle button"
         unstyle
-        className="absolute right-1 top-1/2 -translate-x-1/4 -translate-y-1/2 rounded p-0.5 text-muted opacity-75 hover:opacity-100 focus:opacity-100 peer-disabled:pointer-events-none"
+        className="absolute end-1.5 top-1/2 -translate-x-1/4 -translate-y-1/2 rounded p-0.5 text-muted opacity-75 hover:opacity-100 focus:opacity-100 peer-disabled:pointer-events-none"
       >
         {isPasswordVisible ? (
           <EyeOffIcon className="size-4" />

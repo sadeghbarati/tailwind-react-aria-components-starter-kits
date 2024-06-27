@@ -58,7 +58,7 @@ export function TabList<T extends object & { title: string; id: string }>(
           'group-data-[variant=underline]:orientation-horizontal:w-full',
 
           // underline vertical
-          'group-data-[variant=underline]:orientation-vertical:border-l',
+          'group-data-[variant=underline]:orientation-vertical:border-s',
           'group-data-[variant=underline]:orientation-vertical:self-start',
 
           // pills horizontal
@@ -115,7 +115,7 @@ export function Tab(props: TabProps) {
 
           'group-data-[variant=underline]:group-orientation-vertical:before:inset-y-0',
           'group-data-[variant=underline]:group-orientation-vertical:before:selected:bg-accent',
-          'group-data-[variant=underline]:group-orientation-vertical:before:selected:left-[-1.5px]',
+          'group-data-[variant=underline]:group-orientation-vertical:before:selected:start-[-1.5px]',
           'group-data-[variant=underline]:group-orientation-vertical:before:selected:w-[2px]',
 
           // pill

@@ -54,13 +54,13 @@ export function SplitButton(props: RACButtonProps) {
         props.className,
 
         [
-          'rounded-r-none',
-          '-mr-[0.5px] rounded-r-none',
-          "after:absolute after:right-0 after:top-0 after:h-full after:border-l-[1.5px] after:border-l-border after:content-['']",
-          'border-r-0',
+          'rounded-e-none',
+          '-me-[0.5px] rounded-e-none',
+          "after:absolute after:end-0 after:top-0 after:h-full after:border-s-[1.5px] after:border-s-border after:content-['']",
+          'border-e-0',
           context.outline
-            ? 'after:border-l'
-            : 'after:border-l-2 after:border-l-white/20 dark:after:border-black/20',
+            ? 'after:border-s'
+            : 'after:border-s-2 after:border-s-white/20 dark:after:border-black/20',
         ],
       )}
     />
@@ -80,7 +80,7 @@ export function SplitButtonMenuTrigger({
       color={context.color}
       className={composeTailwindRenderProps(
         props.className,
-        'w-8 rounded-l-none border-l-0',
+        'w-8 rounded-s-none border-s-0',
       )}
       isIconOnly
     >

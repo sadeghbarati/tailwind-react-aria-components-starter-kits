@@ -70,12 +70,12 @@ export const Example = () => {
                   </Text>
                   <Form className="py-4" id="edit-profile-form">
                     <TextField isRequired className="grid grid-cols-4 gap-x-4">
-                      <Label className="ml-auto">Name</Label>
+                      <Label className="ms-auto">Name</Label>
                       <Input className="col-span-3"></Input>
                       <FieldError className="col-span-3 col-start-2" />
                     </TextField>
                     <TextField isRequired className="grid grid-cols-4 gap-4">
-                      <Label className="ml-auto">Username</Label>
+                      <Label className="ms-auto">Username</Label>
                       <Input className="col-span-3"></Input>
                       <FieldError className="col-span-3 col-start-2" />
                     </TextField>
@@ -115,12 +115,12 @@ export const DialogSizes = () => {
                   </Text>
                   <Form className="py-4" id="edit-profile-form">
                     <TextField isRequired className="grid grid-cols-4 gap-x-4">
-                      <Label className="ml-auto">Name</Label>
+                      <Label className="ms-auto">Name</Label>
                       <Input className="col-span-3"></Input>
                       <FieldError className="col-span-3 col-start-2" />
                     </TextField>
                     <TextField isRequired className="grid grid-cols-4 gap-4">
-                      <Label className="ml-auto">Username</Label>
+                      <Label className="ms-auto">Username</Label>
                       <Input className="col-span-3"></Input>
                       <FieldError className="col-span-3 col-start-2" />
                     </TextField>
@@ -169,12 +169,12 @@ export const NoCloseButton = () => {
                   </Text>
                   <Form className="py-4" id="edit-profile-form">
                     <TextField isRequired className="grid grid-cols-4 gap-x-4">
-                      <Label className="ml-auto">Name</Label>
+                      <Label className="ms-auto">Name</Label>
                       <Input className="col-span-3"></Input>
                       <FieldError className="col-span-3 col-start-2" />
                     </TextField>
                     <TextField isRequired className="grid grid-cols-4 gap-4">
-                      <Label className="ml-auto">Username</Label>
+                      <Label className="ms-auto">Username</Label>
                       <Input className="col-span-3"></Input>
                       <FieldError className="col-span-3 col-start-2" />
                     </TextField>
@@ -222,12 +222,12 @@ export const NoHeader = () => {
                   </Text>
                   <Form className="py-4" id="edit-profile-form">
                     <TextField isRequired className="grid grid-cols-4 gap-x-4">
-                      <Label className="ml-auto">Name</Label>
+                      <Label className="ms-auto">Name</Label>
                       <Input className="col-span-3"></Input>
                       <FieldError className="col-span-3 col-start-2" />
                     </TextField>
                     <TextField isRequired className="grid grid-cols-4 gap-4">
-                      <Label className="ml-auto">Username</Label>
+                      <Label className="ms-auto">Username</Label>
                       <Input className="col-span-3"></Input>
                       <FieldError className="col-span-3 col-start-2" />
                     </TextField>
@@ -280,12 +280,12 @@ export const AutoFocusElements = (args: any) => {
                       className="grid grid-cols-4 gap-x-4"
                       autoFocus
                     >
-                      <Label className="ml-auto">Name</Label>
+                      <Label className="ms-auto">Name</Label>
                       <Input className="col-span-3"></Input>
                       <FieldError className="col-span-3 col-start-2" />
                     </TextField>
                     <TextField isRequired className="grid grid-cols-4 gap-4">
-                      <Label className="ml-auto">Username</Label>
+                      <Label className="ms-auto">Username</Label>
                       <Input className="col-span-3"></Input>
                       <FieldError className="col-span-3 col-start-2" />
                     </TextField>
@@ -340,12 +340,12 @@ export const WithIsDismissableAndKeyboardDismissDisabled = () => {
                       className="grid grid-cols-4 gap-x-4"
                       autoFocus
                     >
-                      <Label className="ml-auto">Name</Label>
+                      <Label className="ms-auto">Name</Label>
                       <Input className="col-span-3"></Input>
                       <FieldError className="col-span-3 col-start-2" />
                     </TextField>
                     <TextField isRequired className="grid grid-cols-4 gap-4">
-                      <Label className="ml-auto">Username</Label>
+                      <Label className="ms-auto">Username</Label>
                       <Input className="col-span-3"></Input>
                       <FieldError className="col-span-3 col-start-2" />
                     </TextField>
@@ -541,12 +541,12 @@ export const WithControlledOpenState = () => {
                 className="grid grid-cols-4 gap-x-4"
                 autoFocus
               >
-                <Label className="ml-auto">Name</Label>
+                <Label className="ms-auto">Name</Label>
                 <Input className="col-span-3"></Input>
                 <FieldError className="col-span-3 col-start-2" />
               </TextField>
               <TextField isRequired className="grid grid-cols-4 gap-4">
-                <Label className="ml-auto">Username</Label>
+                <Label className="ms-auto">Username</Label>
                 <Input className="col-span-3"></Input>
                 <FieldError className="col-span-3 col-start-2" />
               </TextField>
@@ -613,7 +613,7 @@ export const NestedDialogs = () => {
             </TextField>
 
             <Button
-              className="ml-auto"
+              className="ms-auto"
               onPress={() => {
                 setIsEditDialogOpen(false);
               }}
@@ -698,7 +698,7 @@ export const CustomDialogHeader = () => {
                               className="py-0.5 text-xs/6"
                             >
                               <Bell
-                                className="mr-1 h-4 w-4"
+                                className="me-1 h-4 w-4"
                                 strokeWidth={1.5}
                               />
                               <span className="hidden md:block">
@@ -836,7 +836,7 @@ export const WithMinHeight = () => {
                               className="py-0.5 text-xs/6"
                             >
                               <Bell
-                                className="mr-1 h-4 w-4"
+                                className="me-1 h-4 w-4"
                                 strokeWidth={1.5}
                               />
                               <span className="hidden md:block">
@@ -896,7 +896,7 @@ export const WithMinHeight = () => {
                       >
                         <Tab id="about">About</Tab>
                         <Tab id="members">
-                          Members <span className="pl-2">24</span>
+                          Members <span className="ps-2">24</span>
                         </Tab>
                         <Tab id="integrations">Integrations</Tab>
                         <Tab id="settings">Settings</Tab>
@@ -999,12 +999,12 @@ export const Drawers = () => {
                   </Text>
                   <Form className="py-4" id="edit-profile-form">
                     <TextField isRequired className="grid grid-cols-4 gap-x-4">
-                      <Label className="ml-auto">Name</Label>
+                      <Label className="ms-auto">Name</Label>
                       <Input className="col-span-3"></Input>
                       <FieldError className="col-span-3 col-start-2" />
                     </TextField>
                     <TextField isRequired className="grid grid-cols-4 gap-4">
-                      <Label className="ml-auto">Username</Label>
+                      <Label className="ms-auto">Username</Label>
                       <Input className="col-span-3"></Input>
                       <FieldError className="col-span-3 col-start-2" />
                     </TextField>

@@ -92,7 +92,7 @@ export const OneThumb = () => {
       className="flex w-[350px] flex-col"
     >
       <div className="flex flex-1 items-end">
-        <Label className="text-nowrap pr-4 font-normal pb-1">Output Volume:</Label>
+        <Label className="text-nowrap pe-4 font-normal pb-1">Output Volume:</Label>
         <div className="flex flex-1 flex-col">
           <SliderOutput className="self-center">
             {({ state }) => {

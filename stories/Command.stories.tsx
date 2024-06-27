@@ -64,18 +64,18 @@ export function CommandK() {
       >
         <div className="relative">
           <Icon>
-            <Search className="absolute left-2 top-1/2 w-4 -translate-y-1/2 text-muted" />
+            <Search className="absolute start-2 top-1/2 w-4 -translate-y-1/2 text-muted" />
           </Icon>
 
           <Input
             ref={ref}
             placeholder="Search for apps and commands&hellip;"
-            className="peer pl-7"
+            className="peer ps-7"
           />
-          <Keyboard className="absolute right-2 top-1/2 hidden -translate-y-1/2 px-2 font-sans text-[0.6rem] text-sm/6 text-muted sm:flex sm:peer-data-[focused=true]:hidden">
+          <Keyboard className="absolute start-2 top-1/2 hidden -translate-y-1/2 px-2 font-sans text-[0.6rem] text-sm/6 text-muted sm:flex sm:peer-data-[focused=true]:hidden">
             ⌘K
           </Keyboard>
-          <Keyboard className="absolute right-2 top-1/2 hidden -translate-y-1/2 rounded-md border px-2 py-0.5 text-[0.6rem] text-muted sm:peer-data-[focused=true]:flex">
+          <Keyboard className="absolute end-2 top-1/2 hidden -translate-y-1/2 rounded-md border px-2 py-0.5 text-[0.6rem] text-muted sm:peer-data-[focused=true]:flex">
             ESC
           </Keyboard>
         </div>
@@ -185,12 +185,12 @@ export function OpenInDialog() {
           >
             <div className="relative rounded-md">
               <Icon>
-                <Search className="absolute left-2 top-1/2 w-4 -translate-y-1/2 text-muted" />
+                <Search className="absolute start-2 top-1/2 w-4 -translate-y-1/2 text-muted" />
               </Icon>
 
               <Input
                 placeholder="Search for apps and commands&hellip;"
-                className="rounded-b-none border-border bg-background pl-7 ring-0"
+                className="rounded-b-none border-border bg-background ps-7 ring-0"
               />
 
               <ClearButton

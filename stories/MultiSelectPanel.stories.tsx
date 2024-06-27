@@ -38,7 +38,7 @@ export const Example = () => {
   const options = [
     { id: 'enhancement', name: 'Enhancement' },
     { id: 'bug', name: 'Bug' },
-    { id: 'good_fist_issue', name: 'Good first issue' },
+    { id: 'good_first_issue', name: 'Good first issue' },
     { id: 'design', name: 'Design' },
     { id: 'blocker', name: 'Blocker' },
     { id: 'backend', name: 'Backend' },

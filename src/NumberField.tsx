@@ -27,7 +27,7 @@ export function NumberInput(
   props: Omit<InputProps, keyof RACNumberFieldProps>,
 ) {
   return (
-    <InputFieldGroup className="fist:border-r">
+    <InputFieldGroup className="first:border-e">
       {() => (
         <>
           <StepperButton slot="increment">
@@ -48,7 +48,7 @@ function StepperButton(props: ButtonProps) {
   return (
     <Button
       {...props}
-      className="h-9 cursor-default px-2 text-gray-500 first:border-r last:border-l pressed:bg-hover group-disabled:opacity-50"
+      className="h-9 cursor-default px-2 text-gray-500 first:border-e last:border-s pressed:bg-hover group-disabled:opacity-50"
     />
   );
 }
