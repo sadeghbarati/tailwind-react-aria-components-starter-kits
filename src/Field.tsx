@@ -258,9 +258,9 @@ export function SearchInput({
         className,
         '[&_input::-webkit-search-cancel-button]:hidden',
       )}
-    >
+    > 
       <Icon>
-        <Search className="ms-2 size-5" strokeWidth={1.5} />
+        <Search className="ms-2 size-5 text-muted" />
       </Icon>
       <Input {...props} />
       <CloseButton plain size="sm" className="me-1 group-empty:invisible" />
