@@ -19,7 +19,10 @@ export function SwitchField({
           'sm:[&_[slot=description]]:has-[label[data-label-position=left]]:pe-[4rem]',
           'sm:[&_[slot=description]]:has-[label[data-label-position=right]]:ps-[3rem]',
           '[&_label]:has-[[data-label-position=left]]:justify-between',
+          // When the radio has description, make the label font-medium
           '[&_label]:has-[[slot=description]]:font-medium',
+          // When the switch is disabled
+          '[&_[slot=description]]:has-[label[data-disabled]]:opacity-50',
           className,
         )}
       />
@@ -28,11 +31,11 @@ export function SwitchField({
 }
 
 interface SwitchProps extends RACSwitchProps {
-  labelPosition?: 'left' | 'right';
+  labelPlacement?: 'left' | 'right';
 }
 
 export function Switch({
-  labelPosition = 'left',
+  labelPlacement = 'left',
   children,
   ...props
 }: SwitchProps) {
@@ -43,7 +46,7 @@ export function Switch({
           <RACSwitch
             {...props}
             aria-describedby={context?.['aria-describedby']}
-            data-label-position={labelPosition}
+            data-label-position={labelPlacement}
             className={composeTailwindRenderProps(
               props.className,
               'group flex items-center gap-4 text-base/6 transition disabled:opacity-50 sm:text-sm/6',
@@ -51,7 +54,7 @@ export function Switch({
           >
             {(renderProps) => (
               <>
-                {labelPosition === 'left' &&
+                {labelPlacement === 'left' &&
                   (typeof children === 'function'
                     ? children(renderProps)
                     : children)}
@@ -72,7 +75,7 @@ export function Switch({
                   <span className="h-[0.85rem] w-[0.85rem] translate-x-0 transform rounded-full bg-white shadow-sm transition duration-200 ease-in-out group-selected:translate-x-[90%]" />
                 </div>
 
-                {labelPosition === 'right' &&
+                {labelPlacement === 'right' &&
                   (typeof children === 'function'
                     ? children(renderProps)
                     : children)}

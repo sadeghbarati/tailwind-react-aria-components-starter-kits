@@ -42,7 +42,7 @@ export function CheckboxGroupContent({
       {...props}
       className={twMerge(
         'flex gap-3 group-orientation-vertical:flex-col ',
-        // When a checkbox has description, make the label font-medium if it is not
+        // When a checkbox of the group has description, make all labels font-medium inside the group if it is not
         '[&_label:not(.font-medium)]:has-[[slot=description]]:font-medium',
         className,
       )}
@@ -63,8 +63,10 @@ export function CheckboxField({
           'sm:[&_[slot=description]]:has-[label[data-label-position=left]]:pe-7',
           'sm:[&_[slot=description]]:has-[label[data-label-position=right]]:ps-7',
           '[&_label]:has-[[data-label-position=left]]:justify-between',
-          // When a checkbox has description, make the label font-medium
+          // When the checkbox has description, make the label font-medium
           '[&_label]:has-[[slot=description]]:font-medium',
+          // When the checkbox is disabled
+          '[&_[slot=description]]:has-[label[data-disabled]]:opacity-50',
           className,
         )}
       />
@@ -73,11 +75,11 @@ export function CheckboxField({
 }
 
 interface CheckboxProps extends RACCheckboxProps {
-  labelPosition?: 'left' | 'right';
+  labelPlacement?: 'left' | 'right';
 }
 
 export function Checkbox({
-  labelPosition = 'right',
+  labelPlacement = 'right',
   children,
   ...props
 }: CheckboxProps) {
@@ -88,7 +90,7 @@ export function Checkbox({
           <RACCheckbox
             {...props}
             aria-describedby={context?.['aria-describedby']}
-            data-label-position={labelPosition}
+            data-label-position={labelPlacement}
             className={composeTailwindRenderProps(
               props.className,
               'group flex items-center gap-3 text-base/6 transition disabled:opacity-50 sm:text-sm/6',
@@ -96,7 +98,7 @@ export function Checkbox({
           >
             {(renderProps) => (
               <>
-                {labelPosition === 'left' &&
+                {labelPlacement === 'left' &&
                   (typeof children === 'function'
                     ? children(renderProps)
                     : children)}
@@ -105,7 +107,8 @@ export function Checkbox({
                     'flex flex-shrink-0 items-center justify-center',
                     'size-4 rounded border border-zinc-400/75 shadow-sm transition',
                     'dark:border-[1.5px] dark:border-zinc-600',
-                    'invalid:border-destructive',
+                    renderProps.isInvalid &&
+                      'border-destructive dark:border-destructive',
                     (renderProps.isSelected || renderProps.isIndeterminate) &&
                       'border-accent bg-accent/95 dark:border-accent',
                     renderProps.isFocusVisible && focusOutlineStyle,
@@ -122,7 +125,7 @@ export function Checkbox({
                   ) : null}
                 </div>
 
-                {labelPosition === 'right' &&
+                {labelPlacement === 'right' &&
                   (typeof children === 'function'
                     ? children(renderProps)
                     : children)}

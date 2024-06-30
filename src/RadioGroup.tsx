@@ -30,7 +30,7 @@ export function RadioGroupContent({
       {...props}
       className={twMerge(
         'flex flex-col gap-2 group-orientation-horizontal:flex-row group-orientation-horizontal:flex-wrap',
-        // When a radio has description, make the label font-medium if it is not
+        // When a radio of the group has description, make all labels font-medium if it is not
         '[&_label:not(.font-medium)]:has-[[slot=description]]:font-medium',
         className,
       )}
@@ -51,8 +51,10 @@ export function RadioField({
           'sm:[&_[slot=description]]:has-[label[data-label-position=left]]:pe-7',
           'sm:[&_[slot=description]]:has-[label[data-label-position=right]]:ps-7',
           '[&_label]:has-[[data-label-position=left]]:justify-between',
-          // When a radio has description, make the label font-medium
+          // When the radio has description, make the label font-medium
           '[&_label]:has-[[slot=description]]:font-medium',
+          // When the radio is disabled
+          '[&_[slot=description]]:has-[label[data-disabled]]:opacity-50',
           className,
         )}
       />
@@ -61,7 +63,7 @@ export function RadioField({
 }
 
 export interface RadioProps extends RACRadioProps {
-  labelPosition?: 'left' | 'right';
+  labelPlacement?: 'left' | 'right';
   render?: never;
 }
 
@@ -93,13 +95,13 @@ export function Radio({
           );
         }
 
-        const { labelPosition = 'right', ...restProps } = props;
+        const { labelPlacement = 'right', ...restProps } = props;
 
         return (
           <RACRadio
             {...restProps}
             aria-describedby={context?.['aria-describedby']}
-            data-label-position={labelPosition}
+            data-label-position={labelPlacement}
             className={composeTailwindRenderProps(
               className,
               'group flex items-center gap-3 text-base/6 group-orientation-horizontal:text-nowrap disabled:opacity-50 sm:text-sm/6',
@@ -108,7 +110,7 @@ export function Radio({
             {(renderProps) => {
               return (
                 <>
-                  {labelPosition === 'left' &&
+                  {labelPlacement === 'left' &&
                     (typeof props.children === 'function'
                       ? props.children(renderProps)
                       : props.children)}
@@ -117,8 +119,8 @@ export function Radio({
                     slot="radio"
                     className={twMerge(
                       'h-4 w-4 shrink-0 rounded-full border border-zinc-400/75 shadow-sm transition-all disabled:opacity-75 dark:border-zinc-600',
-                      'invalid:border-destructive invalid:dark:border-destructive',
-
+                      renderProps.isInvalid &&
+                        'border-destructive dark:border-destructive',
                       renderProps.isSelected &&
                         'border-[5px] border-accent bg-white dark:border-accent',
 
@@ -130,7 +132,7 @@ export function Radio({
                     )}
                   />
 
-                  {labelPosition === 'right' &&
+                  {labelPlacement === 'right' &&
                     (typeof props.children === 'function'
                       ? props.children(renderProps)
                       : props.children)}
